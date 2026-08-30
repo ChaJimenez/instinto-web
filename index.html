@@ -7,13 +7,24 @@
 <meta name="description" content="Hamburguesas artesanales en Roma Norte, Ciudad de México. Pide a domicilio sin comisiones extras o visítanos en Plaza Villa de Madrid 6. Aquí manda el hambre.">
 <link rel="canonical" href="https://instinto.mx/">
 <meta name="theme-color" content="#1a1a1a">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23C85A3A'/%3E%3Ctext x='32' y='44' font-family='Arial,sans-serif' font-weight='900' font-size='34' fill='white' text-anchor='middle'%3EI%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="restaurant.menu">
+<meta property="og:title" content="INSTINTO — Hamburguesas en Roma Norte, CDMX">
+<meta property="og:description" content="Hamburguesas artesanales en Roma Norte, Ciudad de México. Pide a domicilio sin comisiones extras o visítanos en Plaza Villa de Madrid 6. Aquí manda el hambre.">
+<meta property="og:image" content="https://instinto.mx/images/hero.jpg">
+<meta property="og:url" content="https://instinto.mx/">
+<meta property="og:locale" content="es_MX">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="INSTINTO — Hamburguesas en Roma Norte, CDMX">
+<meta name="twitter:description" content="Hamburguesas artesanales en Roma Norte, CDMX. Pide sin comisiones extras.">
+<meta name="twitter:image" content="https://instinto.mx/images/hero.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 @font-face {
   font-family: 'Morning Grown';
-  src: url('fonts/MorningGrown.ttf') format('truetype');
+  src: url('fonts/MorningGrown.otf') format('opentype');
   font-weight: normal;
   font-display: swap;
 }
@@ -60,7 +71,13 @@ nav{position:sticky;top:0;z-index:100;background:rgba(20,20,20,.95);backdrop-fil
 .nav-links{display:flex;gap:32px;list-style:none;}
 .nav-links a{text-decoration:none;font-size:.85rem;font-weight:600;letter-spacing:.03em;color:#ddd;}
 .nav-links a:hover{color:var(--orange);}
-@media(max-width:700px){.nav-links{display:none;}}
+.nav-toggle{display:none;background:none;border:none;color:#fff;font-size:1.6rem;cursor:pointer;padding:4px 8px;}
+@media(max-width:700px){
+  .nav-links{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:0;background:#161616;border-top:1px solid rgba(255,255,255,.08);}
+  .nav-links.open{display:flex;}
+  .nav-links a{display:block;padding:16px 24px;border-bottom:1px solid rgba(255,255,255,.06);}
+  .nav-toggle{display:block;}
+}
 
 /* HERO */
 .hero{position:relative;min-height:88vh;display:flex;align-items:flex-end;}
@@ -94,6 +111,7 @@ section{padding:80px 0;}
 .dish-info .price{color:var(--orange);font-family:var(--font-head);font-size:1.1rem;}
 .dish-info p{color:#b0b0b0;font-size:.9rem;}
 .menu-simple{max-width:800px;}
+.featured-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px;}
 .menu-line{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid rgba(255,255,255,.08);}
 .menu-line span:last-child{color:var(--green);font-family:var(--font-head);font-weight:700;}
 
@@ -160,11 +178,12 @@ footer{background:#111;padding:36px 0;text-align:center;color:#777;font-size:.85
       <li><a href="#ubicacion">UBICACIÓN</a></li>
     </ul>
     <a class="btn btn-orange" href="https://menu.fu.do/instinto">PEDIR AHORA</a>
+    <button class="nav-toggle" aria-label="Abrir menú" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
   </div>
 </nav>
 
 <section class="hero">
-  <img src="images/hero.jpg" alt="Hamburguesa artesanal INSTINTO, Roma Norte CDMX">
+  <img src="images/hero.jpg" alt="Hamburguesa artesanal INSTINTO, Roma Norte CDMX" width="1600" height="1000" fetchpriority="high">
   <div class="hero-content container">
     <h1>Aquí manda<br>el hambre.</h1>
     <p class="sub">Hamburguesas de culto en Roma Norte, CDMX.</p>
@@ -206,12 +225,16 @@ footer{background:#111;padding:36px 0;text-align:center;color:#777;font-size:.85
       </div>
       <div class="featured-grid" style="margin-top:24px;width:100%;">
         <article class="dish-card">
-          <div class="imgwrap"><img src="images/chicharron.jpg" alt="Chicharrón carnoso INSTINTO con salsa verde"></div>
+          <div class="imgwrap"><img src="images/chicharron.jpg" alt="Chicharrón carnoso INSTINTO con salsa verde" width="900" height="675" loading="lazy"></div>
           <div class="dish-info"><div class="row"><h3>Chicharrón Carnoso</h3><span class="price">$98</span></div></div>
         </article>
         <article class="dish-card">
-          <div class="imgwrap"><img src="images/mac-cheese.jpg" alt="Mac and cheese tipo NY INSTINTO"></div>
+          <div class="imgwrap"><img src="images/mac-cheese.jpg" alt="Mac and cheese tipo NY INSTINTO" width="900" height="675" loading="lazy"></div>
           <div class="dish-info"><div class="row"><h3>Mac & Cheese</h3><span class="price">$98</span></div></div>
+        </article>
+        <article class="dish-card">
+          <div class="imgwrap"><img src="images/camote.jpg" alt="Bastones de camote fritos INSTINTO" width="900" height="1350" loading="lazy"></div>
+          <div class="dish-info"><div class="row"><h3>Bastones de Camote</h3><span class="price">$78</span></div></div>
         </article>
       </div>
     </div>
@@ -220,14 +243,14 @@ footer{background:#111;padding:36px 0;text-align:center;color:#777;font-size:.85
       <p class="section-sub" style="margin-bottom:20px;">Todas en pan brioche casero.</p>
       <div class="menu-panel active" style="display:grid;">
       <article class="dish-card">
-        <div class="imgwrap"><img src="images/clasica.jpg" alt="Cheeseburger clásica INSTINTO"></div>
+        <div class="imgwrap"><img src="images/clasica.jpg" alt="Cheeseburger clásica INSTINTO" width="900" height="675" loading="lazy"></div>
         <div class="dish-info">
           <div class="row"><h3>Cheeseburger Clásica</h3><span class="price">$99</span></div>
           <p>Carne de res 90 g, queso americano, pepinillos y salsa de la casa.</p>
         </div>
       </article>
       <article class="dish-card">
-        <div class="imgwrap"><img src="images/doble.jpg" alt="Doble Doble hamburguesa con doble carne INSTINTO"></div>
+        <div class="imgwrap"><img src="images/doble.jpg" alt="Doble Doble hamburguesa con doble carne INSTINTO" width="900" height="675" loading="lazy"></div>
         <div class="dish-info">
           <div class="row"><h3>Doble Doble</h3><span class="price">$150</span></div>
           <p>Doble carne 180 g, queso americano, queso suizo, pepinillos y salsa de la casa.</p>
@@ -235,7 +258,7 @@ footer{background:#111;padding:36px 0;text-align:center;color:#777;font-size:.85
       </article>
       <article class="dish-card">
         <div class="imgwrap">
-          <img src="images/pollo-miel.jpg" alt="Crispy chicken hot honey INSTINTO">
+          <img src="images/pollo-miel.jpg" alt="Crispy chicken hot honey INSTINTO" width="900" height="1124" loading="lazy">
           <span class="badge spicy">Picante</span>
         </div>
         <div class="dish-info">
@@ -244,7 +267,7 @@ footer{background:#111;padding:36px 0;text-align:center;color:#777;font-size:.85
         </div>
       </article>
       <article class="dish-card">
-        <div class="imgwrap"><img src="images/pbj.jpg" alt="Peanut Butter Jelly pollo crispy INSTINTO"></div>
+        <div class="imgwrap"><img src="images/pbj.jpg" alt="Peanut Butter Jelly pollo crispy INSTINTO" width="900" height="675" loading="lazy"></div>
         <div class="dish-info">
           <div class="row"><h3>Peanut Butter & Jelly</h3><span class="price">$158</span></div>
           <p>Pollo crispy 110 g, crema de cacahuate y mermelada de tocino.</p>
@@ -277,12 +300,24 @@ footer{background:#111;padding:36px 0;text-align:center;color:#777;font-size:.85
         <div class="menu-line"><span>Mermelada de tocino</span><span>$45</span></div>
         <div class="menu-line"><span>Aros de cebolla</span><span>$45</span></div>
       </div>
+      <div class="featured-grid" style="margin-top:24px;width:100%;max-width:340px;">
+        <article class="dish-card">
+          <div class="imgwrap"><img src="images/toppings.jpg" alt="Aros de cebolla y lengua de tocino INSTINTO" width="900" height="1350" loading="lazy"></div>
+          <div class="dish-info"><div class="row"><h3>Aros de cebolla y lengua de tocino</h3></div></div>
+        </article>
+      </div>
     </div>
 
     <div class="menu-panel" id="panel-ensaladas">
       <div class="menu-simple" style="width:100%;">
         <div class="menu-line"><span>Ensalada Negra — lechuga italiana, arúgula, aceitunas negras, queso de cabra, vinagreta balsámica (125 g)</span><span>$89</span></div>
         <div class="menu-line"><span>Clásica César — lechuga italiana, jitomate, parmesano, croutones, aderezo César (125 g)</span><span>$79</span></div>
+      </div>
+      <div class="featured-grid" style="margin-top:24px;width:100%;max-width:340px;">
+        <article class="dish-card">
+          <div class="imgwrap"><img src="images/ensalada-negra.jpg" alt="Ensalada Negra INSTINTO con queso de cabra y aceitunas" width="900" height="720" loading="lazy"></div>
+          <div class="dish-info"><div class="row"><h3>Ensalada Negra</h3><span class="price">$89</span></div></div>
+        </article>
       </div>
     </div>
 
@@ -293,7 +328,7 @@ footer{background:#111;padding:36px 0;text-align:center;color:#777;font-size:.85
       </div>
       <div class="featured-grid" style="margin-top:24px;width:100%;max-width:340px;">
         <article class="dish-card">
-          <div class="imgwrap"><img src="images/oreos.jpg" alt="Fried Oreos postre INSTINTO"></div>
+          <div class="imgwrap"><img src="images/oreos.jpg" alt="Fried Oreos postre INSTINTO" width="900" height="675" loading="lazy"></div>
           <div class="dish-info"><div class="row"><h3>Fried Oreos</h3><span class="price">$110</span></div></div>
         </article>
       </div>
@@ -322,12 +357,12 @@ footer{background:#111;padding:36px 0;text-align:center;color:#777;font-size:.85
     <h2 class="section-title">Así se ve el hambre</h2>
     <p class="section-sub">Roma Norte, CDMX.</p>
     <div class="gallery-grid">
-      <a href="#"><img src="images/amb-1.jpg" alt="Fachada INSTINTO de noche"></a>
-      <a href="#"><img src="images/amb-2.jpg" alt="Terraza INSTINTO"></a>
-      <a href="#"><img src="images/amb-3.jpg" alt="Interior INSTINTO"></a>
-      <a href="#"><img src="images/amb-4.jpg" alt="Salón INSTINTO"></a>
-      <a href="#"><img src="images/amb-5.jpg" alt="Fachada INSTINTO de día"></a>
-      <a href="#"><img src="images/combo.jpg" alt="Combo INSTINTO"></a>
+      <a href="#"><img src="images/amb-1.jpg" alt="Fachada INSTINTO de noche" width="900" height="900" loading="lazy"></a>
+      <a href="#"><img src="images/amb-2.jpg" alt="Terraza INSTINTO" width="900" height="900" loading="lazy"></a>
+      <a href="#"><img src="images/amb-3.jpg" alt="Interior INSTINTO" width="900" height="900" loading="lazy"></a>
+      <a href="#"><img src="images/amb-4.jpg" alt="Salón INSTINTO" width="900" height="900" loading="lazy"></a>
+      <a href="#"><img src="images/amb-5.jpg" alt="Fachada INSTINTO de día" width="900" height="900" loading="lazy"></a>
+      <a href="#"><img src="images/combo.jpg" alt="Combo INSTINTO" width="900" height="900" loading="lazy"></a>
     </div>
   </div>
 </section>
