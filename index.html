@@ -205,6 +205,7 @@ footer{background:#111;padding:36px 0;text-align:center;color:#777;font-size:.85
       <button class="menu-tab" onclick="showTab('toppings',this)">TOPPINGS</button>
       <button class="menu-tab" onclick="showTab('ensaladas',this)">ENSALADAS</button>
       <button class="menu-tab" onclick="showTab('postres',this)">POSTRES</button>
+      <button class="menu-tab" onclick="showTab('bebidas',this)">BEBIDAS</button>
     </div>
 
     <div class="menu-panel active" id="panel-combos">
@@ -252,6 +253,16 @@ footer{background:#111;padding:36px 0;text-align:center;color:#777;font-size:.85
     <div class="menu-panel" id="panel-burgers">
       <p class="section-sub" style="margin-bottom:20px;">Todas en pan brioche casero.</p>
       <div class="menu-panel active" style="display:grid;">
+      <article class="dish-card">
+        <div class="imgwrap">
+          <img src="images/hamburguesa-del-mes.jpg" alt="Hamburguesa del mes INSTINTO" width="800" height="800" loading="lazy">
+          <span class="badge top">Del Mes</span>
+        </div>
+        <div class="dish-info">
+          <div class="row"><h3>Hamburguesa del Mes</h3><span class="price">Pregunta en barra</span></div>
+          <p>Receta de temporada, cambia cada mes.</p>
+        </div>
+      </article>
       <article class="dish-card">
         <div class="imgwrap"><img src="images/clasica.jpg" alt="Cheeseburger clásica INSTINTO" width="900" height="1350" loading="lazy"></div>
         <div class="dish-info">
@@ -344,6 +355,18 @@ footer{background:#111;padding:36px 0;text-align:center;color:#777;font-size:.85
         <article class="dish-card">
           <div class="imgwrap"><img src="images/oreos.jpg" alt="Fried Oreos postre INSTINTO" width="900" height="1350" loading="lazy"></div>
           <div class="dish-info"><div class="row"><h3>Fried Oreos</h3><span class="price">$110</span></div></div>
+        </article>
+      </div>
+    </div>
+
+    <div class="menu-panel" id="panel-bebidas">
+      <div class="menu-simple" style="width:100%;">
+        <div class="menu-line"><span>Soda del Día — receta artesanal, cambia diario</span><span>Pregunta en barra</span></div>
+      </div>
+      <div class="featured-grid" style="margin-top:24px;width:100%;max-width:340px;">
+        <article class="dish-card">
+          <div class="imgwrap"><img src="images/sodas.jpg" alt="Sodas artesanales del día INSTINTO" width="900" height="600" loading="lazy"></div>
+          <div class="dish-info"><div class="row"><h3>Soda del Día</h3></div></div>
         </article>
       </div>
     </div>
