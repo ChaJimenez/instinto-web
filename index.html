@@ -146,6 +146,14 @@ section{padding:80px 0;}
 .review-card .author{font-weight:700;}
 .review-card .time{color:#888;}
 
+/* REVIEWS SLIDER */
+.reviews-slider{display:flex;gap:20px;overflow-x:auto;padding-bottom:12px;scroll-behavior:smooth;}
+.reviews-slider::-webkit-scrollbar{height:6px;}
+.reviews-slider::-webkit-scrollbar-track{background:#2a2a2a;border-radius:6px;}
+.reviews-slider::-webkit-scrollbar-thumb{background:var(--orange);border-radius:6px;}
+.reviews-slider .review-card{flex:0 0 calc(50% - 10px);min-width:250px;}
+@media(max-width:800px){.reviews-slider .review-card{flex:0 0 calc(100% - 10px);}}
+
 /* UBICACION */
 .location-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:0;border-radius:16px;overflow:hidden;}
 .location-grid iframe{width:100%;height:100%;min-height:420px;border:0;filter:grayscale(.15);}
@@ -416,7 +424,7 @@ footer{background:#111;padding:36px 0;text-align:center;color:#777;font-size:.85
       </div>
       <a class="see-all-link" href="https://www.google.com/maps?q=Instinto+Hamburguesa+Roma+Norte+CDMX" target="_blank">Ver todas las reseñas en Google →</a>
     </div>
-    <div class="reviews-grid">
+    <div class="reviews-slider">
       <div class="review-card">
         <div class="stars">★★★★★</div>
         <p class="quote">"Pedí la hamburguesa de pollo con miel y la verdad es que deliciosa! Pedí también la soda italiana y muy rica, tenía frutita natural."</p>
