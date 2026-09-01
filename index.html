@@ -419,38 +419,14 @@ footer{background:#111;padding:36px 0;text-align:center;color:#777;font-size:.85
       <div>
         <h2 class="section-title">Lo que dice la gente</h2>
         <div class="rating-badge">
-          <span class="num">5.0</span>
-          <div><div class="stars">★★★★★</div><div class="count">5 reseñas</div></div>
+          <span class="num" id="reviews-rating">4.5</span>
+          <div><div class="stars" id="reviews-stars">★★★★★</div><div class="count" id="reviews-count">216 reseñas</div></div>
         </div>
       </div>
       <a class="see-all-link" href="https://www.google.com/maps?q=Instinto+Hamburguesa+Roma+Norte+CDMX" target="_blank">Ver todas las reseñas en Google →</a>
     </div>
-    <div class="reviews-slider">
-      <div class="review-card">
-        <div class="stars">★★★★★</div>
-        <p class="quote">"Pedí la hamburguesa de pollo con miel y la verdad es que deliciosa! Pedí también la soda italiana y muy rica, tenía frutita natural."</p>
-        <div class="meta"><span class="author">Erick M. Lara</span><span class="time">Local Guide</span></div>
-      </div>
-      <div class="review-card">
-        <div class="stars">★★★★★</div>
-        <p class="quote">"Una hamburguesa de pollo con crema de cacahuate y mermelada de tocino que solo vería en mis sueños más desquiciados y dulces..."</p>
-        <div class="meta"><span class="author">Salvador Jauregui Pérez</span></div>
-      </div>
-      <div class="review-card">
-        <div class="stars">★★★★★</div>
-        <p class="quote">"Buenas hamburguesas y el mac and cheese está muy bueno. Buen servicio."</p>
-        <div class="meta"><span class="author">Jonathan S.</span><span class="time">412 reseñas</span></div>
-      </div>
-      <div class="review-card">
-        <div class="stars">★★★★★</div>
-        <p class="quote">"Comí una hamburguesa y una ensalada y ambas con sabor muy bueno. El precio razonable."</p>
-        <div class="meta"><span class="author">Julio García</span><span class="time">Local Guide</span></div>
-      </div>
-      <div class="review-card">
-        <div class="stars">★★★★★</div>
-        <p class="quote">"Ya no había cervezas oscuras!!! Punto malo, todo lo demás genial!"</p>
-        <div class="meta"><span class="author">Eduardo Razo Navarro</span><span class="time">Local Guide</span></div>
-      </div>
+    <div class="reviews-slider" id="reviews-slider">
+      <div class="review-card"><p class="quote">Cargando reseñas...</p></div>
     </div>
   </div>
 </section>
@@ -490,6 +466,28 @@ function showTab(name, btn){
   btn.classList.add('active');
   document.getElementById('panel-'+name).classList.add('active');
 }
+</script>
+
+<script>
+fetch('/api/reviews')
+  .then(r => r.json())
+  .then(data => {
+    if (data.error) { console.error('Reseñas:', data.error); return; }
+    const slider = document.getElementById('reviews-slider');
+    const ratingEl = document.getElementById('reviews-rating');
+    const countEl = document.getElementById('reviews-count');
+    if (ratingEl && data.overallRating) ratingEl.textContent = data.overallRating.toFixed(1);
+    if (countEl && data.totalRatings) countEl.textContent = data.totalRatings + ' reseñas';
+    if (!data.reviews || !data.reviews.length) return;
+    slider.innerHTML = data.reviews.map(rv => `
+      <div class="review-card">
+        <div class="stars">${'★'.repeat(rv.rating)}${'☆'.repeat(5-rv.rating)}</div>
+        <p class="quote">"${rv.text}"</p>
+        <div class="meta"><span class="author">${rv.author}</span><span class="time">${rv.relativeTime}</span></div>
+      </div>
+    `).join('');
+  })
+  .catch(err => console.error('Error cargando reseñas:', err));
 </script>
 
 </body>
