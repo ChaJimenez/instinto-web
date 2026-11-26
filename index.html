@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>INSTINTO — Hamburguesas en Roma Norte, CDMX</title>
-<meta name="description" content="Hamburguesas artesanales en Roma Norte, Ciudad de México. Pide a domicilio sin comisiones extras o visítanos en Plaza Villa de Madrid 6. Aquí manda el hambre.">
+<meta name="description" content="Hamburguesas artesanales en Roma Norte, CDMX. Pide a domicilio o ven a Plaza Villa de Madrid 6. Abierto todos los días.">
 <link rel="canonical" href="https://instinto.mx/">
 <meta name="theme-color" content="#1a1a1a">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23C85A3A'/%3E%3Ctext x='32' y='44' font-family='Arial,sans-serif' font-weight='900' font-size='34' fill='white' text-anchor='middle'%3EI%3C/text%3E%3C/svg%3E">
@@ -38,7 +38,83 @@
 
 </style>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Restaurant","name":"INSTINTO","servesCuisine":"Hamburguesas","priceRange":"$$","telephone":"","url":"https://instinto.mx/","image":"https://instinto.mx/images/hero.jpg","address":{"@type":"PostalAddress","streetAddress":"Plaza Villa de Madrid 6","addressLocality":"Roma Norte, Cuauhtémoc","addressRegion":"CDMX","postalCode":"06700","addressCountry":"MX"},"geo":{"@type":"GeoCoordinates","latitude":19.4202401,"longitude":-99.1655871},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"12:00","closes":"23:00"}],"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.5","reviewCount":"216","bestRating":"5"},"acceptsReservations":"False","menu":"https://instinto.mx/#menu","sameAs":["https://www.instagram.com/hinstinto/"]}
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "@id": "https://instinto.mx/#restaurant",
+  "name": "INSTINTO",
+  "url": "https://instinto.mx/",
+  "image": [
+    "https://instinto.mx/images/hero.jpg",
+    "https://instinto.mx/images/doble.jpg"
+  ],
+  "description": "Hamburguesas artesanales en Roma Norte, CDMX. Combos, entradas, postres y pedido a domicilio.",
+  "servesCuisine": [
+    "Hamburguesas",
+    "Comida americana"
+  ],
+  "priceRange": "$$",
+  "telephone": "+52 55 3917 3066",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Plaza Villa de Madrid 6, Col. Roma Norte",
+    "addressLocality": "Ciudad de México",
+    "addressRegion": "CDMX",
+    "postalCode": "06700",
+    "addressCountry": "MX"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 19.42028,
+    "longitude": -99.16558
+  },
+  "hasMap": "https://maps.app.goo.gl/h1U46rZsz8qM1K6W6",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday"
+      ],
+      "opens": "12:00",
+      "closes": "22:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "12:00",
+      "closes": "23:00"
+    }
+  ],
+  "hasMenu": "https://instinto.mx/#menu",
+  "acceptsReservations": false,
+  "potentialAction": {
+    "@type": "OrderAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://menu.fu.do/instinto",
+      "inLanguage": "es-MX",
+      "actionPlatform": [
+        "http://schema.org/DesktopWebPlatform",
+        "http://schema.org/MobileWebPlatform"
+      ]
+    },
+    "deliveryMethod": [
+      "http://purl.org/goodrelations/v1#DeliveryModeOwnFleet",
+      "http://purl.org/goodrelations/v1#DeliveryModePickUp"
+    ]
+  },
+  "sameAs": [
+    "https://www.instagram.com/hinstinto/",
+    "https://maps.app.goo.gl/h1U46rZsz8qM1K6W6"
+  ]
+}
 </script>
 <style>
 :root{
@@ -84,8 +160,8 @@ nav{position:sticky;top:0;z-index:100;background:rgba(20,20,20,.95);backdrop-fil
 .hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;}
 .hero::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.05) 0%,rgba(0,0,0,.55) 90%);z-index:1;}
 .hero-content{position:relative;z-index:2;padding:60px 24px 64px;width:100%;}
-.hero h1{font-size:clamp(2.4rem,7vw,4.5rem);line-height:.95;margin-bottom:14px;}
-.hero p.sub{font-size:1.15rem;margin-bottom:30px;color:#e5e5e5;}
+.hero h1{font-size:clamp(2.4rem,7vw,4.5rem);line-height:.95;margin-bottom:30px;}
+.hero h1 .h1-sub{display:block;font-family:var(--font-body);font-weight:400;text-transform:none;letter-spacing:normal;font-size:1.15rem;line-height:1.5;margin-top:14px;color:#e5e5e5;}
 .hero-ctas{display:flex;flex-wrap:wrap;gap:14px;}
 
 section{padding:80px 0;}
@@ -128,8 +204,8 @@ section{padding:80px 0;}
 /* GALLERY */
 .gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:160px;gap:12px;}
 .gallery-grid img{width:100%;height:100%;object-fit:cover;border-radius:10px;}
-.gallery-grid a:nth-child(1){grid-row:span 2;}
-@media(max-width:700px){.gallery-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:140px;}.gallery-grid a:nth-child(1){grid-row:span 1;}}
+.gallery-grid div:nth-child(1){grid-row:span 2;}
+@media(max-width:700px){.gallery-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:140px;}.gallery-grid div:nth-child(1){grid-row:span 1;}}
 
 /* REVIEWS */
 .reviews-head{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;margin-bottom:32px;}
@@ -202,8 +278,7 @@ footer{background:#111;padding:36px 0;text-align:center;color:#777;font-size:.85
 <section class="hero">
   <img src="images/hero.jpg" alt="Hamburguesa artesanal INSTINTO, Roma Norte CDMX" width="1600" height="1000" fetchpriority="high">
   <div class="hero-content container">
-    <h1>Aquí manda<br>el hambre.</h1>
-    <p class="sub">Hamburguesas de culto en Roma Norte, CDMX.</p>
+    <h1>Aquí manda<br>el hambre.<span class="h1-sub">Hamburguesas en Roma Norte, CDMX.</span></h1>
     <div class="hero-ctas">
       <a class="btn btn-orange" href="https://menu.fu.do/instinto">Pide acá sin comisiones extras</a>
       <a class="btn btn-outline" href="#menu">Ver menú</a>
@@ -411,13 +486,13 @@ footer{background:#111;padding:36px 0;text-align:center;color:#777;font-size:.85
     <h2 class="section-title">Así se ve el hambre</h2>
     <p class="section-sub">Roma Norte, CDMX.</p>
     <div class="gallery-grid">
-      <a href="#"><img src="images/amb-1.jpg" alt="Fachada INSTINTO de noche" width="900" height="900" loading="lazy"></a>
-      <a href="#"><img src="images/amb-2.jpg" alt="Terraza INSTINTO" width="900" height="900" loading="lazy"></a>
-      <a href="#"><img src="images/amb-3.jpg" alt="Interior INSTINTO" width="900" height="900" loading="lazy"></a>
-      <a href="#"><img src="images/amb-4.jpg" alt="Salón INSTINTO" width="750" height="750" loading="lazy"></a>
-      <a href="#"><img src="images/amb-5.jpg" alt="Fachada INSTINTO de día" width="900" height="900" loading="lazy"></a>
-      <a href="#"><img src="images/amb-6.jpg" alt="Comensales disfrutando en INSTINTO" width="900" height="900" loading="lazy"></a>
-      <a href="#"><img src="images/combo.jpg" alt="Combo INSTINTO" width="900" height="1149" loading="lazy"></a>
+      <div><img src="images/amb-1.jpg" alt="Fachada INSTINTO de noche" width="900" height="900" loading="lazy"></div>
+      <div><img src="images/amb-2.jpg" alt="Terraza INSTINTO" width="900" height="900" loading="lazy"></div>
+      <div><img src="images/amb-3.jpg" alt="Interior INSTINTO" width="900" height="900" loading="lazy"></div>
+      <div><img src="images/amb-4.jpg" alt="Salón INSTINTO" width="750" height="750" loading="lazy"></div>
+      <div><img src="images/amb-5.jpg" alt="Fachada INSTINTO de día" width="900" height="900" loading="lazy"></div>
+      <div><img src="images/amb-6.jpg" alt="Comensales disfrutando en INSTINTO" width="900" height="900" loading="lazy"></div>
+      <div><img src="images/combo.jpg" alt="Combo INSTINTO" width="900" height="1149" loading="lazy"></div>
     </div>
   </div>
 </section>
@@ -453,7 +528,12 @@ footer{background:#111;padding:36px 0;text-align:center;color:#777;font-size:.85
         </div>
         <div class="loc-block">
           <div class="loc-label">HORARIOS</div>
-          <div class="hours-row"><span>Todos los días</span><span>12:00 – 23:00</span></div>
+          <div class="hours-row"><span>Domingo a miércoles</span><span>12:00 – 22:00</span></div>
+          <div class="hours-row"><span>Jueves a sábado</span><span>12:00 – 23:00</span></div>
+        </div>
+        <div class="loc-block">
+          <div class="loc-label">TELÉFONO</div>
+          <div class="loc-value"><a href="tel:+525539173066" style="text-decoration:none;">55 3917 3066</a></div>
         </div>
         <div class="loc-btns">
           <a class="btn btn-orange" href="https://www.google.com/maps?q=Instinto+Hamburguesa+Roma+Norte+CDMX" target="_blank">📍 Cómo llegar</a>
@@ -465,7 +545,7 @@ footer{background:#111;padding:36px 0;text-align:center;color:#777;font-size:.85
 </section>
 
 <footer>
-  <div class="container">© 2026 INSTINTO · Roma Norte, CDMX · <a href="https://www.instagram.com/hinstinto/" target="_blank" style="color:#999;">Instagram</a></div>
+  <div class="container">© 2026 INSTINTO · Roma Norte, CDMX · <a href="tel:+525539173066" style="color:#999;">55 3917 3066</a> · <a href="https://www.instagram.com/hinstinto/" target="_blank" style="color:#999;">Instagram</a></div>
 </footer>
 
 <script>
