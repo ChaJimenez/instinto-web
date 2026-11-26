@@ -54,6 +54,7 @@
     "Comida americana"
   ],
   "priceRange": "$$",
+  "paymentAccepted": "Tarjetas bancarias",
   "telephone": "+52 55 3917 3066",
   "address": {
     "@type": "PostalAddress",
@@ -68,7 +69,7 @@
     "latitude": 19.42028,
     "longitude": -99.16558
   },
-  "hasMap": "https://maps.app.goo.gl/h1U46rZsz8qM1K6W6",
+  "hasMap": "https://maps.app.goo.gl/Q9wyhYxLoTRcq6FX7",
   "openingHoursSpecification": [
     {
       "@type": "OpeningHoursSpecification",
@@ -92,8 +93,20 @@
       "closes": "23:00"
     }
   ],
-  "hasMenu": "https://instinto.mx/#menu",
-  "acceptsReservations": false,
+  "hasMenu": {
+    "@type": "Menu",
+    "@id": "https://instinto.mx/menu/#menu",
+    "name": "Carta INSTINTO",
+    "url": "https://instinto.mx/menu/"
+  },
+  "acceptsReservations": "https://wa.me/525539173066",
+  "areaServed": [
+    {"@type": "Place", "name": "Roma Norte, Ciudad de México"},
+    {"@type": "Place", "name": "Roma Sur, Ciudad de México"},
+    {"@type": "Place", "name": "Condesa, Ciudad de México"},
+    {"@type": "Place", "name": "Escandón, Ciudad de México"},
+    {"@type": "Place", "name": "Juárez, Ciudad de México"}
+  ],
   "potentialAction": {
     "@type": "OrderAction",
     "target": {
@@ -112,7 +125,120 @@
   },
   "sameAs": [
     "https://www.instagram.com/hinstinto/",
-    "https://maps.app.goo.gl/h1U46rZsz8qM1K6W6"
+    "https://maps.app.goo.gl/h1U46rZsz8qM1K6W6",
+    "https://maps.app.goo.gl/Q9wyhYxLoTRcq6FX7"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Dónde está Instinto?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Estamos en Plaza Villa de Madrid 6, colonia Roma Norte, alcaldía Cuauhtémoc, CDMX, C.P. 06700. Puedes abrir la ubicación en Google Maps desde la sección Encuéntranos."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuál es el horario?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Abrimos de domingo a miércoles de 12:00 a 22:00 y de jueves a sábado de 12:00 a 23:00."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puedo comer en el local?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, puedes comer en el local, en Plaza Villa de Madrid 6, Roma Norte."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Se puede reservar mesa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Puedes reservar mesa por WhatsApp al 55 3917 3066."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Aceptan tarjeta?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, aceptamos tarjetas bancarias."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Tienen servicio a domicilio?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Entregamos a domicilio en Condesa, Roma Norte, Roma Sur, Escandón, Juárez y colonias cercanas, hasta unos 3.5 km a la redonda. Si pides en nuestro menú en línea, no pagas comisiones extras. También puedes pedir por Uber Eats."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto cuesta el envío y hay pedido mínimo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El envío empieza en $60 y depende de la distancia: el sistema lo calcula al hacer tu pedido en el menú en línea. El pedido mínimo es de $110."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cómo hago mi pedido?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Puedes pedir en nuestro menú en línea (sin comisiones extras), por Uber Eats, por WhatsApp al 55 3917 3066 o en el local."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Cuánto cuesta una hamburguesa?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nuestras hamburguesas van desde $99 (Cheeseburger Clásica) hasta $158 (Crispy Chicken Hot Honey y Peanut Butter & Jelly). La Doble Doble cuesta $150. Todas van en pan brioche casero."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué incluyen los combos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El Combo Instinto cuesta $168 e incluye Cheeseburger Clásica, papas y refresco casero. El Combo Pareja cuesta $245 e incluye 2 Cheeseburgers y papas a compartir."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Tienen opciones vegetarianas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Tenemos la hamburguesa Vegetariana ($155) y el Parmesan Grilled Cheese ($98), además de ensaladas (Negra $89 y Clásica César $79) y aros de cebolla ($55)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Tienen hamburguesas de pollo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Tenemos Crispy Chicken Hot Honey y Peanut Butter & Jelly ($158 cada una) y Chicken Tenders ($125) para dipear."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Sirven bebidas con alcohol?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Tenemos margaritas, mezcalitas, coctelitos de la casa, cubita, carajillo y cerveza, además de michelada y clamachela."
+      }
+    }
   ]
 }
 </script>
@@ -243,6 +369,18 @@ section{padding:80px 0;}
 .loc-btns{display:flex;flex-direction:column;gap:10px;margin-top:8px;}
 @media(max-width:800px){.location-grid{grid-template-columns:1fr;}.location-grid iframe{min-height:300px;}}
 
+.bev-h{font-size:1rem;color:var(--orange);margin:26px 0 4px;letter-spacing:.04em;}
+
+/* FAQ */
+.faq-list{max-width:820px;}
+.faq-list details{background:var(--charcoal2);border-radius:12px;margin-bottom:12px;}
+.faq-list summary{cursor:pointer;padding:18px 22px;font-family:var(--font-head);font-weight:700;font-size:1rem;list-style:none;}
+.faq-list summary::-webkit-details-marker{display:none;}
+.faq-list summary::after{content:'+';float:right;color:var(--orange);font-size:1.3rem;line-height:1;}
+.faq-list details[open] summary::after{content:'–';}
+.faq-list .faq-a{padding:0 22px 18px;color:#c8c8c8;font-size:.95rem;}
+.faq-list .faq-a a{color:var(--green);}
+
 footer{background:#111;padding:36px 0;text-align:center;color:#777;font-size:.85rem;}
 
 .sticky-cta{position:fixed;bottom:0;left:0;right:0;background:var(--orange);color:#fff;text-align:center;padding:14px;font-family:var(--font-head);font-weight:700;z-index:200;text-decoration:none;display:none;}
@@ -267,7 +405,9 @@ footer{background:#111;padding:36px 0;text-align:center;color:#777;font-size:.85
     <div class="logo">INSTINTO</div>
     <ul class="nav-links">
       <li><a href="#menu">MENÚ</a></li>
+      <li><a href="/menu/">CARTA COMPLETA</a></li>
       <li><a href="#pedir">CÓMO PEDIR</a></li>
+      <li><a href="#preguntas">PREGUNTAS</a></li>
       <li><a href="#ubicacion">UBICACIÓN</a></li>
     </ul>
     <a class="btn btn-orange" href="https://menu.fu.do/instinto">PEDIR AHORA</a>
@@ -289,12 +429,12 @@ footer{background:#111;padding:36px 0;text-align:center;color:#777;font-size:.85
 <section id="menu">
   <div class="container">
     <h2 class="section-title">Menú</h2>
-    <p class="section-sub">Sin rodeos. Elige, pide, devora.</p>
+    <p class="section-sub">Sin rodeos. Elige, pide, devora. <a href="/menu/" style="color:var(--orange);font-weight:700;text-decoration:none;">Ver la carta completa con bebidas y extras →</a></p>
     <div class="menu-tabs">
       <button class="menu-tab active" onclick="showTab('combos',this)">COMBOS</button>
       <button class="menu-tab" onclick="showTab('entradas',this)">ENTRADAS</button>
       <button class="menu-tab" onclick="showTab('burgers',this)">BURGERS</button>
-      <button class="menu-tab" onclick="showTab('toppings',this)">TOPPINGS</button>
+      <button class="menu-tab" onclick="showTab('toppings',this)">EXTRAS</button>
       <button class="menu-tab" onclick="showTab('ensaladas',this)">ENSALADAS</button>
       <button class="menu-tab" onclick="showTab('postres',this)">POSTRES</button>
       <button class="menu-tab" onclick="showTab('bebidas',this)">BEBIDAS</button>
@@ -320,7 +460,7 @@ footer{background:#111;padding:36px 0;text-align:center;color:#777;font-size:.85
         <div class="menu-line"><span>Chicken Tenders — para dipear (250 gr)</span><span>$125</span></div>
         <div class="menu-line"><span>Mac & Cheese Tipo NY — salsa de 4 quesos, codito y cebollín (200 gr)</span><span>$98</span></div>
         <div class="menu-line"><span>Chicharrón Carnoso — papada crujiente (200 gr)</span><span>$98</span></div>
-        <div class="menu-line"><span>Coliflor Rostizada — chipotle, mayo ahumada y limón (200 gr)</span><span>$88</span></div>
+        <div class="menu-line"><span>Aros de Cebolla (150 gr)</span><span>$55</span></div>
       </div>
       <div class="featured-grid" style="margin-top:24px;width:100%;">
         <article class="dish-card">
@@ -335,10 +475,6 @@ footer{background:#111;padding:36px 0;text-align:center;color:#777;font-size:.85
           <div class="imgwrap"><img src="images/camote.jpg" alt="Bastones de camote fritos INSTINTO" width="900" height="1350" loading="lazy"></div>
           <div class="dish-info"><div class="row"><h3>Bastones de Camote</h3><span class="price">$78</span></div></div>
         </article>
-        <article class="dish-card">
-          <div class="imgwrap"><img src="images/coliflor.jpg" alt="Coliflor rostizada INSTINTO con chipotle y mayo ahumada" width="800" height="999" loading="lazy"></div>
-          <div class="dish-info"><div class="row"><h3>Coliflor Rostizada</h3><span class="price">$88</span></div></div>
-        </article>
       </div>
     </div>
 
@@ -346,20 +482,10 @@ footer{background:#111;padding:36px 0;text-align:center;color:#777;font-size:.85
       <p class="section-sub" style="margin-bottom:20px;">Todas en pan brioche casero.</p>
       <div class="menu-panel active" style="display:grid;">
       <article class="dish-card">
-        <div class="imgwrap">
-          <img src="images/hamburguesa-del-mes.jpg" alt="Hamburguesa del mes INSTINTO" width="800" height="800" loading="lazy">
-          <span class="badge top">Del Mes</span>
-        </div>
-        <div class="dish-info">
-          <div class="row"><h3>Hamburguesa del Mes</h3><span class="price">Pregunta en barra</span></div>
-          <p>Receta de temporada, cambia cada mes.</p>
-        </div>
-      </article>
-      <article class="dish-card">
         <div class="imgwrap"><img src="images/clasica.jpg" alt="Cheeseburger clásica INSTINTO" width="900" height="1350" loading="lazy"></div>
         <div class="dish-info">
           <div class="row"><h3>Cheeseburger Clásica</h3><span class="price">$99</span></div>
-          <p>Carne de res 90 g, queso americano, pepinillos y salsa de la casa.</p>
+          <p>Carne sirloin y ribeye 90 g, queso americano, pepinillos y salsa de la casa.</p>
         </div>
       </article>
       <article class="dish-card">
@@ -397,7 +523,7 @@ footer{background:#111;padding:36px 0;text-align:center;color:#777;font-size:.85
         <div class="imgwrap"><div class="ph">Parmesan Grilled Cheese</div></div>
         <div class="dish-info">
           <div class="row"><h3>Parmesan Grilled Cheese</h3><span class="price">$98</span></div>
-          <p>Pan de caja artesanal, mucho cheddar y mozzarella y costra de parmesano, con salsa marinara.</p>
+          <p>Pan de caja artesanal, mucho cheddar, mozzarella y costra de parmesano 120 g, salsa marinara.</p>
         </div>
       </article>
       </div>
@@ -411,7 +537,6 @@ footer{background:#111;padding:36px 0;text-align:center;color:#777;font-size:.85
         <div class="menu-line"><span>Salsa de quesos y tocino</span><span>$48</span></div>
         <div class="menu-line"><span>Aguacate</span><span>$45</span></div>
         <div class="menu-line"><span>Mermelada de tocino</span><span>$45</span></div>
-        <div class="menu-line"><span>Aros de cebolla</span><span>$45</span></div>
       </div>
       <div class="featured-grid" style="margin-top:24px;width:100%;max-width:340px;">
         <article class="dish-card">
@@ -436,8 +561,8 @@ footer{background:#111;padding:36px 0;text-align:center;color:#777;font-size:.85
 
     <div class="menu-panel" id="panel-postres">
       <div class="menu-simple" style="width:100%;">
-        <div class="menu-line"><span>Camotes y Helado de Cardamomo</span><span>$105</span></div>
-        <div class="menu-line"><span>Fried Oreos</span><span>$110</span></div>
+        <div class="menu-line"><span>Camotes con Helado de Cardamomo (180 gr)</span><span>$105</span></div>
+        <div class="menu-line"><span>Fried Oreos (150 gr)</span><span>$110</span></div>
       </div>
       <div class="featured-grid" style="margin-top:24px;width:100%;max-width:700px;">
         <article class="dish-card">
@@ -452,14 +577,48 @@ footer{background:#111;padding:36px 0;text-align:center;color:#777;font-size:.85
     </div>
 
     <div class="menu-panel" id="panel-bebidas">
-      <div class="menu-simple" style="width:100%;">
-        <div class="menu-line"><span>Soda del Día — receta artesanal, cambia diario</span><span>Pregunta en barra</span></div>
-      </div>
-      <div class="featured-grid" style="margin-top:24px;width:100%;max-width:340px;">
-        <article class="dish-card">
-          <div class="imgwrap"><img src="images/sodas.jpg" alt="Sodas artesanales del día INSTINTO" width="900" height="600" loading="lazy"></div>
-          <div class="dish-info"><div class="row"><h3>Soda del Día</h3></div></div>
-        </article>
+      <div class="menu-simple" style="width:100%;grid-column:1/-1;">
+        <p class="section-sub" style="margin-bottom:8px;">Margaritas, mezcalitas, coctelitos, cervezas, cafés y refrescos.</p>
+        <h3 class="bev-h">Margaritas</h3>
+        <div class="menu-line"><span>Margarita del día — 2 oz de tequila. Pregunta por el sabor del día.</span><span>$125</span></div>
+        <div class="menu-line"><span>Margarita clásica — 2 oz de tequila, jugo de limón con escarcha de sal.</span><span>$125</span></div>
+        <h3 class="bev-h">Mezcalitas</h3>
+        <div class="menu-line"><span>Mezcalita Instinto — Mezcal 2 oz. Pregunta por los sabores disponibles.</span><span>$125</span></div>
+        <div class="menu-line"><span>Shot Mezcal Convite — 2 oz</span><span>$120</span></div>
+        <h3 class="bev-h">Nuestros coctelitos</h3>
+        <div class="menu-line"><span>Dirty Rick — Vodka, jugo de limón y salmuera de la casa</span><span>$125</span></div>
+        <div class="menu-line"><span>Coco Spicy — Licor Ancho Reyes, crema de coco, mezcal y jugo de limón</span><span>$125</span></div>
+        <div class="menu-line"><span>Purple Rain — Ginebra, jugo de limón y zarzamora</span><span>$125</span></div>
+        <div class="menu-line"><span>El Desvelado — Cold brew + jugo de limón, jugo de naranja, destilado de pulque y menta</span><span>$125</span></div>
+        <div class="menu-line"><span>Piñita — Mezcal, tequila, jarabe de agave, jugo de piña y jugo de limón</span><span>$125</span></div>
+        <h3 class="bev-h">Otros tragos</h3>
+        <div class="menu-line"><span>Cubita — Ron Bacardí Blanco 45 ml. Elige tu mezclador 355 ml</span><span>$120</span></div>
+        <div class="menu-line"><span>Carajillo — Licor 43 y café cold brew</span><span>$145</span></div>
+        <h3 class="bev-h">Cervezas</h3>
+        <div class="menu-line"><span>Corona 355 ml</span><span>$65</span></div>
+        <div class="menu-line"><span>Victoria 355 ml</span><span>$65</span></div>
+        <div class="menu-line"><span>Pacífico 355 ml</span><span>$65</span></div>
+        <div class="menu-line"><span>XX Lager 355 ml</span><span>$65</span></div>
+        <div class="menu-line"><span>XX Ámbar 355 ml</span><span>$65</span></div>
+        <div class="menu-line"><span>Modelo Especial 355 ml</span><span>$75</span></div>
+        <div class="menu-line"><span>Negra Modelo 355 ml</span><span>$80</span></div>
+        <div class="menu-line"><span>Heineken 355 ml</span><span>$80</span></div>
+        <div class="menu-line"><span>Corona Familiar 940 ml</span><span>$170</span></div>
+        <div class="menu-line"><span>Victoria Familiar 940 ml</span><span>$170</span></div>
+        <div class="menu-line"><span>Miller 940 ml</span><span>$170</span></div>
+        <h3 class="bev-h">Preparadas</h3>
+        <div class="menu-line"><span>Clamato preparado</span><span>$80</span></div>
+        <div class="menu-line"><span>Michelado</span><span>$30</span></div>
+        <div class="menu-line"><span>Cubano</span><span>$35</span></div>
+        <div class="menu-line"><span>Clamachela</span><span>$40</span></div>
+        <h3 class="bev-h">Cafés</h3>
+        <div class="menu-line"><span>Americano / Espresso</span><span>$35</span></div>
+        <div class="menu-line"><span>Cappuccino / Latte / Cortado</span><span>$45</span></div>
+        <h3 class="bev-h">Refrescos</h3>
+        <div class="menu-line"><span>Coca Cola 355 ml</span><span>$55</span></div>
+        <div class="menu-line"><span>Limonada 450 ml</span><span>$45</span></div>
+        <div class="menu-line"><span>Agua mineral Zifón 500 ml</span><span>$40</span></div>
+        <div class="menu-line"><span>Soda Instinto 450 ml</span><span>$50</span></div>
       </div>
     </div>
   </div>
@@ -474,9 +633,11 @@ footer{background:#111;padding:36px 0;text-align:center;color:#777;font-size:.85
       <div class="step"><div class="step-num">02</div><h3>Pide por Fudo</h3><p>Mándanos tu pedido directo. Sin intermediarios, sin comisiones.</p></div>
       <div class="step"><div class="step-num">03</div><h3>Recíbelo en tu puerta</h3><p>Lo preparamos y te lo llevamos. Caliente, rápido, sin pretextos.</p></div>
     </div>
+    <p class="section-sub" style="margin-bottom:20px;">Reparto a domicilio en Roma Norte, Roma Sur, Condesa, Escandón y Juárez (unos 3.5 km a la redonda). Envío desde $60 y pedido mínimo de $110.</p>
     <div class="order-ctas">
       <a class="btn btn-orange" href="https://menu.fu.do/instinto">🍔 Pide acá sin comisiones extras</a>
       <a class="btn btn-dark" href="https://www.ubereats.com/mx/store/instinto-hamburguesas/BAofbHK4SsK_UUiwazPY7A" target="_blank">Pedir en Uber Eats</a>
+      <a class="btn btn-green" href="https://wa.me/525539173066" target="_blank" rel="noopener">Pedir por WhatsApp</a>
     </div>
   </div>
 </section>
@@ -515,6 +676,28 @@ footer{background:#111;padding:36px 0;text-align:center;color:#777;font-size:.85
   </div>
 </section>
 
+<section id="preguntas">
+  <div class="container">
+    <h2 class="section-title">Preguntas frecuentes</h2>
+    <p class="section-sub">Lo que más nos preguntan.</p>
+    <div class="faq-list">
+      <details><summary>¿Dónde está Instinto?</summary><div class="faq-a">Estamos en Plaza Villa de Madrid 6, colonia Roma Norte, alcaldía Cuauhtémoc, CDMX, C.P. 06700. Puedes abrir la ubicación en Google Maps desde la sección Encuéntranos.</div></details>
+      <details><summary>¿Cuál es el horario?</summary><div class="faq-a">Abrimos de domingo a miércoles de 12:00 a 22:00 y de jueves a sábado de 12:00 a 23:00.</div></details>
+      <details><summary>¿Puedo comer en el local?</summary><div class="faq-a">Sí, puedes comer en el local, en Plaza Villa de Madrid 6, Roma Norte.</div></details>
+      <details><summary>¿Se puede reservar mesa?</summary><div class="faq-a">Sí. Puedes reservar mesa por WhatsApp al 55 3917 3066.</div></details>
+      <details><summary>¿Aceptan tarjeta?</summary><div class="faq-a">Sí, aceptamos tarjetas bancarias.</div></details>
+      <details><summary>¿Tienen servicio a domicilio?</summary><div class="faq-a">Sí. Entregamos a domicilio en Condesa, Roma Norte, Roma Sur, Escandón, Juárez y colonias cercanas, hasta unos 3.5 km a la redonda. Si pides en nuestro menú en línea, no pagas comisiones extras. También puedes pedir por Uber Eats.</div></details>
+      <details><summary>¿Cuánto cuesta el envío y hay pedido mínimo?</summary><div class="faq-a">El envío empieza en $60 y depende de la distancia: el sistema lo calcula al hacer tu pedido en el menú en línea. El pedido mínimo es de $110.</div></details>
+      <details><summary>¿Cómo hago mi pedido?</summary><div class="faq-a">Puedes pedir en nuestro menú en línea (sin comisiones extras), por Uber Eats, por WhatsApp al 55 3917 3066 o en el local.</div></details>
+      <details><summary>¿Cuánto cuesta una hamburguesa?</summary><div class="faq-a">Nuestras hamburguesas van desde $99 (Cheeseburger Clásica) hasta $158 (Crispy Chicken Hot Honey y Peanut Butter &amp; Jelly). La Doble Doble cuesta $150. Todas van en pan brioche casero.</div></details>
+      <details><summary>¿Qué incluyen los combos?</summary><div class="faq-a">El Combo Instinto cuesta $168 e incluye Cheeseburger Clásica, papas y refresco casero. El Combo Pareja cuesta $245 e incluye 2 Cheeseburgers y papas a compartir.</div></details>
+      <details><summary>¿Tienen opciones vegetarianas?</summary><div class="faq-a">Sí. Tenemos la hamburguesa Vegetariana ($155) y el Parmesan Grilled Cheese ($98), además de ensaladas (Negra $89 y Clásica César $79) y aros de cebolla ($55).</div></details>
+      <details><summary>¿Tienen hamburguesas de pollo?</summary><div class="faq-a">Sí. Tenemos Crispy Chicken Hot Honey y Peanut Butter &amp; Jelly ($158 cada una) y Chicken Tenders ($125) para dipear.</div></details>
+      <details><summary>¿Sirven bebidas con alcohol?</summary><div class="faq-a">Sí. Tenemos margaritas, mezcalitas, coctelitos de la casa, cubita, carajillo y cerveza, además de michelada y clamachela.</div></details>
+    </div>
+  </div>
+</section>
+
 <section id="ubicacion">
   <div class="container">
     <h2 class="section-title">Encuéntranos</h2>
@@ -535,9 +718,14 @@ footer{background:#111;padding:36px 0;text-align:center;color:#777;font-size:.85
           <div class="loc-label">TELÉFONO</div>
           <div class="loc-value"><a href="tel:+525539173066" style="text-decoration:none;">55 3917 3066</a></div>
         </div>
+        <div class="loc-block">
+          <div class="loc-label">RESERVACIONES Y PAGOS</div>
+          <div class="loc-value" style="font-size:.95rem;font-weight:500;">Reserva tu mesa por WhatsApp. Aceptamos tarjetas bancarias.</div>
+        </div>
         <div class="loc-btns">
-          <a class="btn btn-orange" href="https://www.google.com/maps?q=Instinto+Hamburguesa+Roma+Norte+CDMX" target="_blank">📍 Cómo llegar</a>
-          <a class="btn btn-dark" href="https://www.google.com/maps?q=Instinto+Hamburguesa+Roma+Norte+CDMX" target="_blank">Ver en Google Maps</a>
+          <a class="btn btn-orange" href="https://maps.app.goo.gl/Q9wyhYxLoTRcq6FX7" target="_blank" rel="noopener">📍 Cómo llegar</a>
+          <a class="btn btn-green" href="https://wa.me/525539173066" target="_blank" rel="noopener">Reservar o pedir por WhatsApp</a>
+          <a class="btn btn-dark" href="https://maps.app.goo.gl/Q9wyhYxLoTRcq6FX7" target="_blank" rel="noopener">Ver en Google Maps</a>
         </div>
       </div>
     </div>
@@ -545,7 +733,7 @@ footer{background:#111;padding:36px 0;text-align:center;color:#777;font-size:.85
 </section>
 
 <footer>
-  <div class="container">© 2026 INSTINTO · Roma Norte, CDMX · <a href="tel:+525539173066" style="color:#999;">55 3917 3066</a> · <a href="https://www.instagram.com/hinstinto/" target="_blank" style="color:#999;">Instagram</a></div>
+  <div class="container">© 2026 INSTINTO · Roma Norte, CDMX · <a href="tel:+525539173066" style="color:#999;">55 3917 3066</a> · <a href="/menu/" style="color:#999;">Carta</a> · <a href="https://www.instagram.com/hinstinto/" target="_blank" style="color:#999;">Instagram</a></div>
 </footer>
 
 <script>
